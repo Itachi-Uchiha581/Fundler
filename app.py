@@ -151,15 +151,16 @@ class CalculateMetric:
             return "Error: Unable to calculate metrics", 0, False
         is_investable = False
 
-        if combined_metric >= 7:
+        if combined_metric >= 8:
             is_investable = True
             message = "The company's fundamentals are Extremely Strong"
             return message, combined_metric, is_investable
-        elif combined_metric >=4:
+        elif combined_metric >=6:
             is_investable = True
             message = "The company's fundamentals are Strong"
             return message, combined_metric, is_investable
         else:
+            is_investable = False
             message = "The company's fundamentals are Weak"
             return message, combined_metric, is_investable
 
